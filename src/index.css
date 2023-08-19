@@ -31,6 +31,9 @@
 
   :root {
     --primary: #0192FE;
+    --status-success: #5FBE51;
+    --status-warning: #FFC107;
+    --status-notavailable: #E0E0E0;
   }
   
   html {
@@ -45,6 +48,21 @@
 
 @layer components {
   .cont {
-    @apply max-w-7xl px-10 mx-auto
+    @apply max-w-7xl px-6 mx-auto;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
   }
 }

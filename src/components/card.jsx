@@ -12,6 +12,7 @@ function CardDesc({ children }) {
 function Card({ children, className, active = false }) {
   return (
     <div
+      data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="100"
       className={rc(
         "p-8 space-y-5 border rounded-2xl def-shadow",
         active ? "border-primary-default" : "border-none",
